@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Experiments";
+}
+<section class="section">
+    <div class="section__partial">
+        <div class="experiment-section__info">
+            <h1 class="section-title">
+               Experiments
+            </h1>
+            <h4 class="section-description">
+                Whenever I have time, I dive into the<br />
+                internet world for inspiration. It's a<br /> 
+                great process and I'm discovering a lot for<br />
+                myself. It's like getting an extra weapon<br />
+                before going into battle. I save different<br />
+                styles, techniques, rhythms for myself and<br />
+                try to use them in new projects
+            </h4>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="experiment-section__images">
+        @for(int i=0; i < 12; i++)
+        {
+            <div class="experiment-section__image">
+                <a href="#">
+                    <img src="~/images/logo.jpg" alt="My image">
+                </a>
+            </div>
+        }
+    </div>
+</section>

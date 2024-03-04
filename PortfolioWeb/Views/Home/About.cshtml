@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "About me";
+}
+<section class="section">
+    <div class="section__partial">
+        <div class="main-section__info">
+            <h1 class="section-title">
+                About
+            </h1>
+            <h4 class="section-description">
+                Hi! I am Bekhzod Usmonov. I was born in 1999,
+                9th may. Attracted by the narrative and
+                emotional scope of cinema, he has directed
+                several award-winning short films and is
+                currently working on his first feature.
+                Julien listens to people's bodies, capturing a
+                precise movement, an attitude, and proposes a
+                reflection on our contemporary lives and their
+                histories. Every gesture becomes a word, every
+                movement a sentence. The idea that the body can
+                translate thoughts and feelings, that it
+                expresses itself as a language made up of
+                attitudes and rhythms, defines Julien's
+                visual quest.
+                He is a fervent advocate of women's empowerment
+                and representation in the industry. His work
+                often challenges societal norms, celebrating
+                diversity and breaking conventional boundaries.
+                The unique tone and energy of his work has
+                earned him commissions from brands such as
+                Cartier, Nike, Iris Van Herpen, Alaïa, Jean
+                Paul Gaultier and Mugler.
+                COLLECTION
+            </h4>
+        </div>
+        <div class="about-section__images">
+            @for (int i = 0; i < 4; i++)
+            {
+                <div class="about-section__image">
+                    <img src="~/images/logo.jpg" alt="My image">
+                </div>
+            }
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</section>

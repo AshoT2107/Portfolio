@@ -1,0 +1,254 @@
+@font-face {
+    font-family: "Inter";
+    src: url('../fonts/Inter/static/Inter-Regular.ttf')
+}
+
+@font-face {
+    font-family: "DMMono";
+    src: url('../fonts/DM_Mono/DMMono-Regular.ttf')
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #090909 !important;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+.section {
+    padding: 100px 30px;
+}
+
+.section img {
+    border-radius: 5px;
+}
+
+.section__partial{
+    margin-top:100px
+}
+
+.section__partial > div {
+    width: 50%;
+    float: left;
+}
+
+.section-title {
+    font-family: Inter;
+    font-size: 36px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 43.57px;
+}
+
+.section-description {
+    font-family: DMMono;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    line-height: 21px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.image__description {
+    font-family: DMMono;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 20px;
+}
+
+.to_uppercase {
+    text-transform: uppercase;
+}
+
+.to_capitalize {
+    text-transform: capitalize;
+}
+
+
+.clearfix {
+    clear: both;
+}
+
+.nav-bg-black {
+    --bs-bg-opacity: 1;
+    background-color: #090909 !important;
+}
+
+.navbar-brand img{
+    width: 48px;
+}
+
+.nav-element {
+    padding: 2px 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    background-color: white;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: rgba(var(--bs-black-rgb),var(--bs-text-opacity));
+}
+
+.nav-item:hover a {
+    color: white;
+    background-color: #292a2a;
+}
+
+.nav-element.active {
+    font-weight: bold;
+    color: white;
+    background-color: #292a2a;
+}
+
+/* Main section */
+
+.main-section__image {
+    padding-left:100px;
+    text-align: left;
+}
+
+.main-section__image-info img{
+    width: 100%;
+}
+
+.main-section__introduction {
+    font-family: Inter;
+    margin-top: 100px;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 50.4px;
+}
+
+
+
+.main-section__position {
+    color: #05364d;
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+/*Experiments*/
+
+.experiment-section__images > div {
+    width: 30%;
+    float: left;
+    margin-left: 10px;
+}
+
+.experiment-section__image img {
+    width:100%;
+    height:300px;
+
+}
+
+/*About*/
+
+.about-section__images > div {
+    width: 50%;
+    float:right
+}
+
+.about-section__image img {
+    width: 100%;
+}
+
+/*Contact*/
+.contact-section__infos {
+    padding-left: 25px;
+}
+.contact-section__info{
+    padding-left: 25px;
+}
+
+.contact-section__infos > div {
+    width: 50%;
+    float: left;
+}
+
+.contact-title {
+    font-family: Inter;
+    margin-top: 100px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.button-link__dot::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 6px;
+    background-color: black;
+    display: inline-block;
+    margin-right: 1px;
+}
+
+.schedule-call__link {
+    font-family: DMMono;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #090909;
+    padding: 5px 20px 5px 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 60px;
+}
+
+.contact-section__info:hover a.schedule-call__link {
+    color: rgba(255, 255, 255, 0.9);
+    background-color: #292a2a;
+}
+
+.contact-link {
+    font-family: DMMono;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+
+}
+
+.contact-link:hover {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 700;
+}
+
+.social-media__items{
+    list-style: none;
+}
+
+.contact-link i {
+    width:32px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.image-link{
+    position:relative;
+}
+
+.image-link img {
+    width: 100%;
+    height: 200px;
+}

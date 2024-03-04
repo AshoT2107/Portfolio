@@ -1,0 +1,39 @@
+﻿@model DataAccess.Entities.VideoEntity
+
+@{
+    ViewData["Title"] = "Project";
+}
+<section class="section">
+    <div class="section__partial">
+        <div class="experiment-section__info">
+            <h1 class="section-title">
+                Project name
+            </h1>
+            <h4 class="section-description" style="width:100%">
+                Here will be more information about project. Artificial intelligence holds the potential to transform various industries,                 however, many companies have yet to adopt its use due to integration obstacles, development expenses, and a lack of expertise in the field.                 Monobotics Technologies' mission is to become an affordable go-to provider of plug-and-play computer vision systems for SMEs.
+            </h4>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12 mb-4">
+                <video class="form-control"
+                       controls
+                       preload="none"
+                       poster="~/@Model.Poster"
+                       data-setup="{}">
+                    <source src="~/@Model.URL"/>
+                </video>
+        </div>
+    </div>
+    <div class="row">
+        @foreach (var item in Model.Images ?? new List<DataAccess.Entities.ImageEntity>())
+        {
+            <div class="col-md-4 mb-3">
+                <a class="image-link" href="#">
+                    <img src="~/@item.URL" alt="My image" />
+                </a>
+            </div>
+        }
+    </div>
+</section>

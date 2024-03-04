@@ -1,0 +1,68 @@
+﻿@model IEnumerable<DataAccess.Entities.VideoEntity>
+
+@{
+    ViewData["Title"] = "Home";
+}
+<section class="section">
+    <div class="section__partial">
+        <div class="main-section__info">
+            <h1 class="main-section__introduction">
+                Motion design, Graphic and<br />
+                Web designer<br />
+                helping people shape<br />
+                digital products and visual<br />
+                systems.
+            </h1>
+            <h4 class="section-description">
+                Bekhzod Usmonov is a graphic & motion designer<br />
+                based in Uzbekistan,Central Asia. He is <br />
+                working in the field of visual communication<br />
+                with a strong focus on typography and Motion <br />
+                design. Working as an independent graphic & <br />
+                motion designer since 2019
+            </h4>
+        </div>
+        <div class="main-section__image">
+            <img src="./images/logo.jpg" alt="My image">
+            <h4 class="image__description" style="text-align:left">
+                Motion & Graphic designer, Web develo-<br />
+                per, Animator
+            </h4>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="section__partial">
+            <div class="main-section__info">
+                <h1 class="section-title">
+                    Selected Works
+                </h1>
+                <h4 class="section-description">
+                I’ve been fortunate enough to work on a<br />
+                wide range of projects that have shaped <br />
+                Unsplash to where it is today: from <br />
+                conceptualization and research to strategic <br />
+                planning, visual design, and <br />
+                implementation. Here are some of my <br />
+                favorites.I’ve been fortunate enough to <br />
+                work on a wide range of projects that have<br /> 
+                shaped Unsplash to where it is today: from <br />
+                conceptualization and research to strategic<br /> 
+                planning, visual design, and <br />
+                implementation. Here are some of my<br /> 
+                favorites.
+                </h4>
+            </div>
+            <div class="main-section__image-info">
+                @foreach(var video in Model)
+                {
+                    <a asp-area="" asp-controller="Home" asp-action="Project" asp-route-id="{@video.Id}">
+                        <img src="~/@video.Poster" alt="My image">
+                    </a>
+                    <h4 class="image__description">
+                        @video.Description
+                    </h4>
+                }
+            </div>
+    </div>
+    <div class="clearfix"></div>
+</section>
