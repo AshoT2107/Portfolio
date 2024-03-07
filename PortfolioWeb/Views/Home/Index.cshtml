@@ -1,7 +1,8 @@
-﻿@model IEnumerable<DataAccess.Entities.VideoEntity>
+﻿@model PortfolioWeb.Entities.UserEntity
 
 @{
     ViewData["Title"] = "Home";
+    var avatar = Model?.Avatar ?? "~/images/b2.jpg";
 }
 <section class="section">
     <div class="section__partial">
@@ -14,19 +15,13 @@
                 systems.
             </h1>
             <h4 class="section-description">
-                Bekhzod Usmonov is a graphic & motion designer<br />
-                based in Uzbekistan,Central Asia. He is <br />
-                working in the field of visual communication<br />
-                with a strong focus on typography and Motion <br />
-                design. Working as an independent graphic & <br />
-                motion designer since 2019
+                @Model?.Information
             </h4>
         </div>
         <div class="main-section__image">
-            <img src="./images/logo.jpg" alt="My image">
-            <h4 class="image__description" style="text-align:left">
-                Motion & Graphic designer, Web develo-<br />
-                per, Animator
+            <img src="~/@avatar" alt="My image">
+            <h4 class="image__description">
+                @Model?.Professions
             </h4>
         </div>
     </div>
@@ -53,13 +48,13 @@
                 </h4>
             </div>
             <div class="main-section__image-info">
-                @foreach(var video in Model)
+                @foreach (var video in Model?.Videos ?? new List<PortfolioWeb.Entities.VideoEntity>())
                 {
                     <a asp-area="" asp-controller="Home" asp-action="Project" asp-route-id="{@video.Id}">
                         <img src="~/@video.Poster" alt="My image">
                     </a>
-                    <h4 class="image__description">
-                        @video.Description
+                    <h4 class="image__description mb-5">
+                        @video.Name
                     </h4>
                 }
             </div>

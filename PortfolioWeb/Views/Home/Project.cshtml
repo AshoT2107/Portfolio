@@ -1,4 +1,4 @@
-﻿@model DataAccess.Entities.VideoEntity
+﻿@model PortfolioWeb.Entities.VideoEntity
 
 @{
     ViewData["Title"] = "Project";
@@ -10,7 +10,7 @@
                 Project name
             </h1>
             <h4 class="section-description" style="width:100%">
-                Here will be more information about project. Artificial intelligence holds the potential to transform various industries,                 however, many companies have yet to adopt its use due to integration obstacles, development expenses, and a lack of expertise in the field.                 Monobotics Technologies' mission is to become an affordable go-to provider of plug-and-play computer vision systems for SMEs.
+                @Model.Description
             </h4>
         </div>
     </div>
@@ -27,7 +27,7 @@
         </div>
     </div>
     <div class="row">
-        @foreach (var item in Model.Images ?? new List<DataAccess.Entities.ImageEntity>())
+        @foreach (var item in Model.Images ?? new List<PortfolioWeb.Entities.ScreenshotEntity>())
         {
             <div class="col-md-4 mb-3">
                 <a class="image-link" href="#">
